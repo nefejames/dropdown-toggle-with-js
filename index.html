@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Dropdown</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        width: 60%;
+        padding: 2rem;
+        border-radius: 13px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .container {
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+      }
+
+      .nav {
+        background: rgb(167, 213, 231);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav i {
+        font-size: 36px;
+        cursor: pointer;
+      }
+
+      .display {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="nav">
+          <h1>Frontend</h1>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <p class="display">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+          tenetur numquam non dolore optio, odit natus magnam adipisci,
+          recusandae quaerat perspiciatis nostrum, tempore eos quam corrupti
+          quibusdam! Nihil veniam blanditiis, vel possimus, quam vitae
+          reprehenderit fugit eos accusamus ab debitis quis quasi eum ut
+          provident? Doloribus corporis cum qui numquam!
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="nav">
+          <h1>Frontend</h1>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <p class="display">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+          tenetur numquam non dolore optio, odit natus magnam adipisci,
+          recusandae quaerat perspiciatis nostrum, tempore eos quam corrupti
+          quibusdam! Nihil veniam blanditiis, vel possimus, quam vitae
+          reprehenderit fugit eos accusamus ab debitis quis quasi eum ut
+          provident? Doloribus corporis cum qui numquam!
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="nav">
+          <h1>Frontend</h1>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <p class="display">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+          tenetur numquam non dolore optio, odit natus magnam adipisci,
+          recusandae quaerat perspiciatis nostrum, tempore eos quam corrupti
+          quibusdam! Nihil veniam blanditiis, vel possimus, quam vitae
+          reprehenderit fugit eos accusamus ab debitis quis quasi eum ut
+          provident? Doloribus corporis cum qui numquam!
+        </p>
+      </div>
+    </main>
+
+    <script>
+      let arrows = document.querySelectorAll("i");
+      let paras = document.querySelectorAll("p");
+      let navs = document.querySelectorAll(".nav");
+
+      navs.forEach(nav => {
+        nav.addEventListener("click", () => {
+          nav.nextElementSibling.classList.toggle("display");
+        });
+      });
+    </script>
+  </body>
+</html>
